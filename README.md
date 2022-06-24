@@ -1,6 +1,4 @@
 # javaRefresh
-Repo with program on fundamentals of Java.
-
 
 Repo has programs covering the below topics:
  - Print Statements
