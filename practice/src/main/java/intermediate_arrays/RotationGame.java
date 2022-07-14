@@ -62,12 +62,14 @@ public class RotationGame {
 			private static int[] RotateArray(int [] InputArr, int rotations) {
 			
 				int l = InputArr.length;
-				int effectiveRotations=rotations%l;
+				//int effectiveRotations=rotations%l;
 				int [] RotateArr = new int[l];
 				
 				
 				RotateArr[0]=InputArr[l-1];
-				
+				for(int k=1, s=0; (k<l) || (s<l-1); k++, s++) {
+					RotateArr[k]=InputArr[s];
+				}
 			
 								
 				return RotateArr;
