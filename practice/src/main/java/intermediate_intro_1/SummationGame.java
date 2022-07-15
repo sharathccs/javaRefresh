@@ -22,7 +22,7 @@ public class SummationGame {
 					System.out.println(sumOfNaturalNumbers(N));
 				}
 			else 
-				System.out.println("Enter number within range");
+				System.out.println("Enter number within the range");
 			
 		}catch(InputMismatchException e) {
 			System.out.println("Enter an integer");
