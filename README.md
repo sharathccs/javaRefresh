@@ -1,6 +1,7 @@
 # javaRefresh
 
 Repo has programs covering the below topics:
+Basic:
  - Print Statements
  - Loops
  - Strings
@@ -9,3 +10,5 @@ Repo has programs covering the below topics:
  - 2D Arrays
  - Functions
  - Patterns
+Intermediate:
+ - Intro to Prob solving
