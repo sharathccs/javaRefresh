@@ -4,7 +4,7 @@ Given a number A. Return square root of the number if it is perfect square other
 
 */
 
-package intermediate_intro_1;
+package intermediate_1_intro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

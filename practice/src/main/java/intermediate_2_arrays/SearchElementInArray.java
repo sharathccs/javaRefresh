@@ -7,7 +7,7 @@ You have to tell whether B is present in array A or not.
 */
 
 
-package intermediate_arrays;
+package intermediate_2_arrays;
 
 import java.util.ArrayList;
 import java.util.HashMap;

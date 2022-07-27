@@ -10,7 +10,7 @@ You are required to return another array which is the reversed form of the input
 */
 
 
-package intermediate_arrays;
+package intermediate_2_arrays;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

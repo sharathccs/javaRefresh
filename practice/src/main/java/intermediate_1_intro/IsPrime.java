@@ -4,7 +4,7 @@ Write a program to print all odd numbers from 1 to N where you have to take N as
 
 */
 
-package intermediate_intro_1;
+package intermediate_1_intro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

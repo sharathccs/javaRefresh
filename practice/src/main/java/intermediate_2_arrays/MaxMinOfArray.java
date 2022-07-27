@@ -5,7 +5,7 @@ Given an integer array A of size N and an integer B, you have to print the same 
 */
 
 
-package intermediate_arrays;
+package intermediate_2_arrays;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
