@@ -5,13 +5,13 @@ Given an integer array A of size N and an integer B, you have to print the same 
 */
 
 
-package intermediate_PrefixSum;
+package intermediate_5_PrefixSum;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class EquilibriumIndex {
+public class EquilibriumIndex2 {
 	
 	public static void main(String[] args) {
 		
@@ -47,6 +47,9 @@ public class EquilibriumIndex {
 				 }
 				 
 
+				//checkEquilibriumIndex(arr1);
+				
+				
 				 System.out.println(checkEquilibriumIndex(arr1));
 				 
 				 
@@ -62,32 +65,26 @@ public class EquilibriumIndex {
 	}
 	
 
-			private static int checkEquilibriumIndex(ArrayList<Integer> A) {
-					int l = A.size();
+			 static int checkEquilibriumIndex(ArrayList<Integer> A) {
 					int val=-1;
 					int SumLeft;
 					int SumRight;
 					
-					ArrayList<Integer> PS = new ArrayList<Integer>(l);
 					
 					
-					//create the PS array
-					PS.add(0, A.get(0));
-					for(int i=1; i<l;i++) {
-						//PS[i] = PS[i-1]+A[i]
-						PS.add(i, (PS.get(i-1)+A.get(i)));
-					}
+					ArrayList<Integer> PrefixSumArrayList = getPrefixSumArrayList(A);
+					int l=PrefixSumArrayList.size();
 					
-					System.out.println("Prefix Sum Array is:"+PS);
+					
 					
 					//check for Sum of left and sum of right for every elemenet
 					for(int k=0;k<l;k++) {
 						
 						if(k==0) {
-							SumLeft = 0;
+							SumLeft = PrefixSumArrayList.get(0);
 						}else {
-							SumLeft = PS.get(k-1);
-							SumRight = PS.get(l-1)-PS.get(k);
+							SumLeft = PrefixSumArrayList.get(k-1);
+							SumRight = PrefixSumArrayList.get(l-1)-PrefixSumArrayList.get(k);
 							
 							if(SumLeft==SumRight) {
 									val=k;
@@ -97,6 +94,28 @@ public class EquilibriumIndex {
 					}
 					
 					return val;
+				
+			}
+			
+			
+			  static ArrayList<Integer> getPrefixSumArrayList(ArrayList<Integer> Arr){
+				
+				System.out.println("The entered array for calculating the prefix sum is:"+Arr);
+				int lengthOfArrayList = Arr.size();
+				
+				
+				ArrayList<Integer> PS = new ArrayList<Integer>(lengthOfArrayList);
+				PS.add(0, Arr.get(0));
+				for (int i=1;i<(lengthOfArrayList);i++) {
+					PS.add(i, PS.get(i-1)+Arr.get(i));
+				}
+				
+				System.out.println("The Prefix sum array is:");
+				System.out.println(PS);
+				
+				
+				return PS;
+				
 				
 			}
 			

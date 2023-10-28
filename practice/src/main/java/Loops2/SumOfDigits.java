@@ -1,5 +1,5 @@
 /*
- Write a program to input T numbers(N) from user and print count of digits of the given numbers.
+ Write a program to input T numbers(N) from user and print sum of digits of the given numbers.
 
 */
 /*
@@ -27,12 +27,12 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CountTheDigits {
+public class SumOfDigits {
 
 	public static void main(String[] args) {
 		BigInteger[] ListOfNums = getNInputs();
 		for(BigInteger j : ListOfNums) { 
-			System.out.println(getCountOfDigits(j));
+			System.out.println(getSumOfDigits(j));
 		}
 	}
 	
@@ -72,25 +72,22 @@ public class CountTheDigits {
 		}
 		*/
 	}
-	private static BigInteger getCountOfDigits(BigInteger M) {
+	private static BigInteger getSumOfDigits(BigInteger M) {
 		
 					BigInteger reminder=BigInteger.ONE;
-					BigInteger count = BigInteger.ZERO;
+					BigInteger sumOfDigits = BigInteger.ZERO;
 					
-					//System.out.println("Entering the get count of digits method");
-					
-					//if(M.intValue()!=0) {
+				
 						if(M.intValue()!=0) {
 						while(reminder.intValue()!=0 && M.intValue()!=0 ) {
 							
 							
 							reminder = M.mod(BigInteger.TEN);
-							//System.out.println("reminder after:"+reminder);
 							if(reminder.intValue()!=0) { 
-									count = count.add(BigInteger.ONE);
+									sumOfDigits = sumOfDigits.add(reminder);
 									M=M.divide(BigInteger.TEN);
 							}else if(M.intValue()!=0 && reminder.intValue()==0) {
-								count = count.add(BigInteger.ONE);
+								sumOfDigits = sumOfDigits.add(reminder);
 								reminder = M.ONE;
 								M=M.divide(BigInteger.TEN);
 							}else
@@ -99,10 +96,10 @@ public class CountTheDigits {
 									
 						}
 					}else {
-						count = count.add(BigInteger.ONE);
+						sumOfDigits = sumOfDigits.add(reminder);
 					}
 					
 				
-				return count;
+				return sumOfDigits;
 		}
 }
