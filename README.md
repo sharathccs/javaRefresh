@@ -15,3 +15,8 @@ Basic:
 
 Intermediate:
  - Intro to Prob solving
+ - Hashing
+ - Backtracking
+ - Commbinatronics
+ - Recursion
+ - Sliding Window
