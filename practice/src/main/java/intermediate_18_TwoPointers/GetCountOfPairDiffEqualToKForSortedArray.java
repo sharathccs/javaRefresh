@@ -25,7 +25,7 @@ public class GetCountOfPairDiffEqualToKForSortedArray {
 
 	public static void main(String[] args) {
 		/*
-		 * int [] ar = {3,7,8,11,14,19,20}; int ki=25;
+		 * int [] ar = {3,7,8,11,14,19,20, 21}; int ki=25;
 		 */
 
 		/*

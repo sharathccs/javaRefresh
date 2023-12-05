@@ -1,6 +1,6 @@
 /*
- * Given a sorted array of integers (not necessarily distinct) A and an integer B, find and return how many pair of integers ( A[i], A[j] ) such that i != j have sum equal to B.
-	Since the number of such pairs can be very large, return number of such pairs modulo (109 + 7)
+ * Given a sorted array of   integers (not necessarily distinct) A and an integer B, find and return how many pair of integers ( A[i], A[j] ) such that i != j have sum equal to B.
+	Since the number of such  pairs can be very large, return number of such pairs modulo (109 + 7)
  * 
  * 
  * The below 

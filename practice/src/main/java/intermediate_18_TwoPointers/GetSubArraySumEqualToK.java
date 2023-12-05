@@ -1,5 +1,5 @@
 /*
- * Given an one-dimensional integer array A of size N and an integer B.
+ * Given an one-dimensional  integer array A of size N and an integer B.
 
 Count all distinct pairs with difference equal to B.
 

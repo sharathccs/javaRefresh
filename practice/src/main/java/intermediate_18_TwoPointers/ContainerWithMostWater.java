@@ -27,7 +27,7 @@ public class ContainerWithMostWater {
 		int a[] = {3,5,4,7,3,6,4,1,2};
 		System.out.println(maxArea(a));
 		
-	}//
+	}
 	
 	
 	public static int maxArea(int []A) {
