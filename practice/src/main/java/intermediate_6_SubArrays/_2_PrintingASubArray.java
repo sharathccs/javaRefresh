@@ -3,7 +3,7 @@ package intermediate_6_SubArrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PrintingASubArray {
+public class _2_PrintingASubArray {
 
 	public static void main(String[] args) {
 		int []A= get1DArray();

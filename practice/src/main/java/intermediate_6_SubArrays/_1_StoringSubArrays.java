@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class StoringSubArrays {
+public class _1_StoringSubArrays {
 
 	public static void main(String[] args) {
 		

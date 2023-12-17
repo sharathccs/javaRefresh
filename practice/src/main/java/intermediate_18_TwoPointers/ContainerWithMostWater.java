@@ -29,7 +29,6 @@ public class ContainerWithMostWater {
 		
 	}
 	
-	
 	public static int maxArea(int []A) {
 		int n=A.length;
 		int i=0;
