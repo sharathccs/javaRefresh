@@ -22,10 +22,24 @@ public class _2_GetSizeOfLinkedList {
 		Node thirdElem = new Node(50);
 		secondElem.next=thirdElem;
 		
-		//System.out.println(getSizeOfLL(head1));
+		Node fourthElem = new Node(60);
+		thirdElem.next=fourthElem;
+		
+		fourthElem.next=null;
+		
+		System.out.println("Size of ll:"+getSizeOfLL(head1));
 		
 		//get the 3rd element from ll
-		getKthElemOfLL(head1, 3);
+		
+		System.out.println("3rd elem of ll:" + getKthElemOfLL(head1, 3) );
+		
+		System.out.println("Search for 50 in ll:" + searchInLL(head1, 40) );
+		
+		System.out.println("Search for 100 in ll:" + searchInLL(head1, 100) );
+		
+	
+		
+		
 
 	}// main method
 	
@@ -68,7 +82,7 @@ public class _2_GetSizeOfLinkedList {
 	}
 	
 	//Search for element v in ll
-	public boolean searchInLL(Node head, int v) {
+	public static boolean searchInLL(Node head, int v) {
 		boolean isDataPresent=false;
 		
 		Node temp = head;
@@ -82,9 +96,66 @@ public class _2_GetSizeOfLinkedList {
 		return isDataPresent;
 	}
 	
+	//Insert a new element and return head
+	public static Node insertInLL(Node head, int B, int atIndex) {
+		Node temp=head;
+		//int index=0;
+		
+		Node n=new Node(B);
+		
+		/*
+		while(temp != null && index < atIndex-1) {
+			temp=temp.next;
+			index++;
+		}
+		*/
+		
+		//if temp itself is null
+		if(atIndex==0) {
+			n.next=head.next;
+			head=n;
+			return head;
+		}
+		
+		
+		for(int i=1;i<atIndex-1;i++) {
+			//to handle the edge case
+			if(temp.next==null) {
+				break;
+			}
+			
+			temp=temp.next;
+		}//fend
+		
+		n.next=temp.next;
+		temp.next=n;
+		
+		return head;
+	}//end of insert method
+	
+
+	/*
+	 * //Insert a new element and return head public Node deleteANodeInLL(Node head,
+	 * int atIndex) { Node temp=head;
+	 * 
+	 * 
+	 * if(atIndex==0) { n.next=head.next; head=n; return head; }
+	 * 
+	 * 
+	 * for(int i=1;i<atIndex-1;i++) { //to handle the edge case if(temp.next==null)
+	 * { break; }
+	 * 
+	 * temp=temp.next; }//fend
+	 * 
+	 * temp.next; temp.next=n;
+	 * 
+	 * return head; }//end of delete method
+	 * 
+	 */
 	
 	
-}
+	
+}//end of class
 
 
 
